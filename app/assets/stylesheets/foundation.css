@@ -85,7 +85,7 @@ select {
 
 /* Grid HTML Classes */
 .row {
-  width: 65%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -259,9 +259,22 @@ select {
 
   .large-3 {
     position: fixed;
-    width: 35%;
+    width: 30%;
+    height: 100%;
     display: block;
-    right: 0%; }
+    right: 0%;
+    background-color:grey;
+    padding: 0;
+    opacity: 0.8; }
+  .side-bar-title {
+    background-color: black;
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    opacity: 0.9;
+
+  }
 
   .large-4 {
     position: relative;
