@@ -1,4 +1,4 @@
 Project2::Application.routes.draw do
 
-get '/home' => 'events#index'
+root :to => 'events#index'
 end

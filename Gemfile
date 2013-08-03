@@ -28,6 +28,9 @@ end
 
 gem 'jquery-rails'
 
+# gem 'thin'
+# gem 'better_errors', :group => :development
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
