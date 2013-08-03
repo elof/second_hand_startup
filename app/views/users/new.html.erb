@@ -1,0 +1,20 @@
+<% provide(:title, "Sign Up") %>
+
+<div class="large-3">
+  <div class="span6 offset3">
+    <center><h1>Sign Up</h1></center>
+    <%= form_for(:user, url: new_user_path) do |f| %>
+
+      <%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %>
+
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Sign up" %>
+    <% end %>
+  </div>
+</div>
