@@ -43,11 +43,11 @@
           .setView([37.76732233927271, -122.41430282592772], 12);
     </script>
 
-    <div class="large-3 columns">
+    <div data-pjax-container class="large-3 columns">
       <%= yield %>
     </div>
 
-    
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
