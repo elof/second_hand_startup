@@ -35,9 +35,19 @@
   <body>
   <div id='map' class='dark'></div>
   <div class="large-3 columns">
-    <div id = "wigwam_sidebar">
+  <div class="row">
+  <aside class="large-3 columns">
+    <h5 class="side-bar-title">Wigwm</h5>
+    <ul class="side-nav">
+      <h4> Profile Info?</h4>
+      <%= link_to "Sign In", signin_path %> or
+      <%= link_to "Sign Up", signup_path %>
+    </ul>
+    <div data-pjax-container>
       <%= yield %>
     </div>
+  </aside>
+</div>
   </div>
   <%= javascript_include_tag "application" %>
   </body>
