@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   validates :username,  presence: true, format: {with: VALID_USERNAME_REGEX }, length: { maximum: 50 }, uniqueness: true
 
   #Must have at least one word character -> an @ sign -> at least one letter,digit, hyphen, or dot -> a literal dot -> at least one letter
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
 
 
