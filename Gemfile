@@ -28,7 +28,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'rack-pjax'
 
 # gem 'thin'
 # gem 'better_errors', :group => :development
