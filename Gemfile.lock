@@ -96,6 +96,8 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.16.0)
+    pjax_rails (0.3.4)
+      jquery-rails
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -195,6 +197,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   pg
+  pjax_rails
   pry-rails
   rails (= 3.2.13)
   rails-erd
