@@ -1,8 +1,6 @@
 <center><h1> Sign Up </h1></center>
 
-<<<<<<< HEAD
-<%= render 'form' %>
-=======
+  <%= form_for(@user) do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username, :autofocus => true%>
 
@@ -17,4 +15,5 @@
 
     <%= f.submit "Sign up" %>
   <% end %>
->>>>>>> 5f2214830e9f280d4ba642612ce001ecd5800a73
+
+

@@ -32,8 +32,8 @@ end
 gem 'jquery-rails'
 gem 'pjax_rails'
 
-# gem 'thin'
-# gem 'better_errors', :group => :development
+gem 'thin'
+gem 'better_errors', :group => :development
 
 group :development, :test do
   gem 'sqlite3'
