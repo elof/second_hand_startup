@@ -1,17 +1,14 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  username        :string(255)
-#  email           :string(255)
-#  password_digest :string(255)
-#  image_url       :string(255)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#
-
 class User < ActiveRecord::Base
+
+  # def self.create_with_omniauth(auth)
+  #   create! do |user|
+  #     @user.provider = auth["provider"]
+  #     @user.uid = auth["uid"]
+  #     @user.username = auth["info"]["name"]
+  #   end
+  # end
+
+
   attr_accessible :username, :email, :image_url, :password, :password_confirmation
   has_secure_password
   
@@ -19,9 +16,9 @@ class User < ActiveRecord::Base
   has_many :rsvps
   has_many :events
   has_many :comments
-  # has_many :messages
 
   before_save { |user| user.email = user.email.downcase }
+  before_save :create_remember_token
 
   #After matching one or more alphanumeric characters, if there's a separator it must be followed by one or more alphanumerics; repeat as needed.
   VALID_USERNAME_REGEX = /^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$/
@@ -35,5 +32,9 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  private
 
+  def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64
+  end
 end

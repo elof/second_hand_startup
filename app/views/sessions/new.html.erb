@@ -1,6 +1,6 @@
 <% provide(:title, "Sign in") %>
   <center><h1>Sign In</h1></center>
-  <%= form_for(:session, url: sessions_path) do |f| %>
+  <%= form_for(:session, :url => sessions_path) do |f| %>
 
     <%= f.label :email %>
     <%= f.text_field :email %>
@@ -10,3 +10,8 @@
 
     <%= f.submit "Sign in" %>
   <% end %>
+
+<p>New user? <%= link_to "Sign up now!", new_session_path %></p>
+
+
+
