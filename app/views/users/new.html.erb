@@ -1,0 +1,24 @@
+<a href='/'><h5 class="side-bar-title">w i g w m</h5></a>
+<center><h3> Sign Up </h3></center>
+<div id="signup_form">
+      <%= form_for(@user) do |f| %>
+        <%= f.text_field :username, :value=>"",:placeholder => "Username", :autofocus => true%>
+        <br />
+        <%= f.email_field :email, :value=>"",:placeholder => "your@email.com"%>
+        <br />
+        <%= f.password_field :password, :value=>"",:placeholder => "Password" %>
+        <br />
+        <%= f.password_field :password_confirmation, :value=>"",:placeholder => "Password Confirmation" %>
+
+        <%= f.label "Upload a profile image." %><br/>
+        <%= f.file_field :image %>
+        
+        <%= f.button "Sign up" %>
+
+      <% end %>
+</div>
+
+
+  
+
+

@@ -1,0 +1,19 @@
+%div.comment{ :id => "comment-#{comment.id}" }
+  
+  %hr
+  - if comment.user_id == current_user.id
+    = button_to "Delete", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "×", :class => 'close'
+
+  %h6
+    = comment.user.username
+
+  %small
+    posted:
+    = (comment.created_at).strftime("%m.%d.%Y")
+    at
+    = (comment.created_at.in_time_zone('Pacific Time (US & Canada)')).strftime("%I:%M%p")
+
+  %p= comment.body
+
+
+

@@ -1,0 +1,147 @@
+<title><%= yield(:title) %></title>
+<%= render :partial => 'navbar' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="create_event">
+  <div id="create_an_event">Create an event:</div>
+    <blockquote>
+    <%= form_for(@event) do |f| %>
+    <h6>1. What type of activity is this?</h6>
+      <ul id="new_event_type">
+        <li>
+          <div class="food">
+         <%= f.radio_button(:event_type, "/assets/food.png", :id => "/assets/food.png") %>
+         <%= f.label(:event_type_food, 'Food', :for => "Food", :title => "Food") %>
+          </div>
+        </li>
+        <li>
+          <div class="sport">
+         <%= f.radio_button(:event_type, "/assets/sports.png", :id => "/assets/sports.png") %>
+         <%= f.label(:event_type_sport, "Sport  ", :for => "Sport", :title => "Sports") %>
+          </div>
+        </li>
+        <li>
+          <div class="music">
+        <%= f.radio_button(:event_type, "/assets/music.png", :id => "/assets/music.png") %>
+        <%= f.label(:event_type_music, "Music  ", :for => "Music", :title => "Music") %>
+          </div>
+        </li>
+        <li>
+          <div class="nightlife">
+         <%= f.radio_button(:event_type, "/assets/nightlife.png", :id => "/assets/nightlife.png") %>
+         <%= f.label(:event_type_nightlife, "Nightlife  ", :for => "Nightlife", :title => "Nightlife") %>
+          </div>
+        </li>
+        <li>
+          <div class="community">
+         <%= f.radio_button(:event_type, "/assets/community.png", :id => "/assets/community.png") %>
+         <%= f.label(:event_type_community, "Community", :for => "Community", :title => "Community") %>
+          </div>
+        </li>
+        <li>
+          <div class="other">
+         <%= f.radio_button(:event_type, "/assets/other.png", :id => "/assets/other.png") %>
+         <%= f.label(:event_type_food, "Other", :for => "Other", :title => "Other") %>
+          </div>
+        </li>
+      </ul>
+    <br>
+    <br>
+    <br>
+    <h6>What did you want to do?</h6>
+      <%= f.text_field :name, :placeholder => "A few words to describe your event." %>
+
+    <h6>Where?</h6>
+      <%= f.text_field :location, :placeholder => "What address will your event take place?" %>
+
+    <h6> 2. What time? </h6>
+    <h6>Start:</h6>
+    Date:
+    <%= f.text_field :date, :placeholder => "Event date?" %>
+    <ul id="new_event_start_time_list">
+      <li>
+        <div id="new_event_time">
+          <%= f.select(:start_time, options_for_select([['Select', 'Select'], ['1:00', '1:00'], ['1:15', '1:15'], ['1:30', '1:30'], ['1:45', '1:45'], ['2:00', '2:00'], ['2:15', '2:15'], ['2:30', '2:30'], ['2:45', '2:45'], ['3:00', '3:00'], ['3:15', '3:15'], ['3:30', '3:30'], ['3:45', '3:45'], ['4:00', '4:00'], ['4:15', '4:15'], ['4:30', '4:30'], ['4:45', '4:45'], ['5:00', '5:00'], ['5:15', '5:15'], ['5:30', '5:30'], ['5:45', '5:45'], ['6:00', '6:00'], ['6:15', '6:15'], ['6:30', '6:30'], ['6:45', '6:45'], ['7:00', '7:00'], ['7:15', '7:15'], ['7:30', '7:30'], ['7:45', '7:45'], ['8:00', '8:00'], ['8:15', '8:15'], ['8:30', '8:30'], ['8:45', '8:45'], ['9:00', '9:00'], ['9:15', '9:15'], ['9:30', '9:30'], ['9:45', '9:45'], ['10:00', '10:00'], ['10:15', '10:15'], ['10:30', '10:30'], ['10:45', '10:45'], ['11:00', '11:00'], ['11:15', '11:15'], ['11:30', '11:30'], ['11:45', '11:45'], ['12:00', '12:00'], ['12:15', '12:15'], ['12:30', '12:30'], ['12:45', '12:45'] ]) ) %>
+        </div>
+      </li>
+      <li>
+        <div id="new_event__am_pm">
+        <%= f.select(:meridian_start, options_for_select([['PM','PM'], ['AM', 'AM']])) %>
+        </div>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <h6>Finish:</h6>
+    <ul id="new_event_finish_time_list">
+      <li>
+       <div id="new_event_time">
+          <%= f.select(:end_time, options_for_select([['Select', 'Select'], ['1:00', '1:00'], ['1:15', '1:15'], ['1:30', '1:30'], ['1:45', '1:45'], ['2:00', '2:00'], ['2:15', '2:15'], ['2:30', '2:30'], ['2:45', '2:45'], ['3:00', '3:00'], ['3:15', '3:15'], ['3:30', '3:30'], ['3:45', '3:45'], ['4:00', '4:00'], ['4:15', '4:15'], ['4:30', '4:30'], ['4:45', '4:45'], ['5:00', '5:00'], ['5:15', '5:15'], ['5:30', '5:30'], ['5:45', '5:45'], ['6:00', '6:00'], ['6:15', '6:15'], ['6:30', '6:30'], ['6:45', '6:45'], ['7:00', '7:00'], ['7:15', '7:15'], ['7:30', '7:30'], ['7:45', '7:45'], ['8:00', '8:00'], ['8:15', '8:15'], ['8:30', '8:30'], ['8:45', '8:45'], ['9:00', '9:00'], ['9:15', '9:15'], ['9:30', '9:30'], ['9:45', '9:45'], ['10:00', '10:00'], ['10:15', '10:15'], ['10:30', '10:30'], ['10:45', '10:45'], ['11:00', '11:00'], ['11:15', '11:15'], ['11:30', '11:30'], ['11:45', '11:45'], ['12:00', '12:00'], ['12:15', '12:15'], ['12:30', '12:30'], ['12:45', '12:45'] ]) ) %>
+        </div>
+      </li>
+      <li>
+        <div id="new_event__am_pm">
+        <%= f.select(:meridian_end, options_for_select([['PM','PM'], ['AM', 'AM']])) %>
+        </div>
+      </li>
+    </ul>
+  <br>
+  <br>
+    <h6>3. Approx. how much will the activity be?</h6>
+    <ul id="new_event_price">
+      <li>
+        <div class="free">
+       <%= f.radio_button(:cost, "Free", :id => "Free") %>
+       <%= f.label(:cost_free, "Free", :for => "Free", :title => "Free") %>
+        </div>
+      </li>
+      <li>
+        <div class="cheap">
+       <%= f.radio_button(:cost, "Cheap", :id => "Cheap") %>
+       <%= f.label(:cost_cheap, "Cheap", :for => "Cheap", :title => "Cheap") %>
+        </div>
+      </li>
+      <li>
+        <div class="pricey">
+       <%= f.radio_button(:cost, "Pricey", :id => "Pricey") %>
+       <%= f.label(:cost_pricey, "Pricey", :for => "Pricey", :title => "Pricey") %>
+        </div>
+      </li>
+      <li>
+        <div class="expensive">
+       <%= f.radio_button(:cost, "Expensive", :id => "Expensive") %>
+       <%= f.label(:cost_expensive, "Expensive", :for => "Expensive", :title => "Expensive") %>
+        </div>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <h6>4. How many people people can RSVP?</h6>
+    <div id="new_event_available_spots">
+      <ul id="new_event_max_attendees">
+        <li id="new_event_attendee_number">
+        <%= f.select(:max_attendee_number, options_for_select([['2', '2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10'], ['11', '11'], ['12+', '12+']])) %>
+        <li id="new_event_attend_no_limit">
+        <%= f.check_box(:max_attendee_number) %>
+        <%= f.label(:max_attendee_number, "No Limit") %>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h6>5. Description:</h6>
+        <%= f.text_field(:description, :placeholder => "Longer description goes here.") %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+    
+      <br>
+      <br>
+      <center><%= f.button "Create Event", :class => 'event_create_button' %></center>
+    <% end %>
+
+  </blockquote>
+</div>

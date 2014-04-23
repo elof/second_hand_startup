@@ -1,0 +1,394 @@
+/* ...
+*= require_self
+*= require_tree .
+*/
+
+#one.inline-list li{
+  color: orange;
+}
+#profile_username a:link, a:visited{
+  text-decoration: none;
+  color: white;
+}
+.leaflet-popup-content .popup p{
+  margin: 0;
+  padding: 0;
+}
+.or{
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.welcome{
+  margin-bottom: -40px;
+}
+.intro_1{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 22px;
+}
+.intro_1 h5{
+  color: orange;
+  padding-bottom: 50px;
+  line-height: 24px;
+}
+.what_to_do h3{
+  color: white;
+  font-size: 20px;
+}
+.to_do_list{
+  padding-bottom: 160px;
+}
+.to_do_list .to_do_list_num{
+  float: left;
+  padding-left: 70px;
+  padding-right: 15px;
+  font-size: 70px;
+  color: white;
+}
+.to_do_list .things_to_do{
+  float: left;
+  font-size: 18px;
+  color: white;
+}
+#signin_top h3{
+  color: orange;
+}
+#signin_top h5{
+color: white;
+padding-left: 20px;
+padding-right: 20px;
+text-align: left;
+}
+.no_post{
+  color: orange;
+}
+.event{
+  padding-left: 75px;
+  padding-top: 102px;
+}
+.event h3{
+  color: orange;
+  font-size: 30px;
+  line-height: 27px;
+}
+.event_image_show{
+  padding-top: 110px;
+  padding-left: 20px;
+  float: left;
+}
+.event_deets{
+  padding-left: 10px;
+  color: white;
+  font-size: 20px;
+}
+.event_deets .event_date{
+  float:left;
+  padding-right: 10px;
+}
+.event_description a{
+  line-height: 24px;
+}
+.rsvp_to_event{
+  text-align: center;
+}
+.comments{
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.comments h4{
+  color: orange;
+}
+.new_user{
+  padding-left: 55px;
+}
+.button.large.secondary{
+padding: 20px 0;
+}
+.button.large.secondary a{
+  padding: 40px 100px;
+}
+.event_index ul:hover{
+  background-color:rgba(31,31,31,0.6);
+}
+.event_index{
+  color: white;
+}
+.create_event h6{
+  color: white;
+  font-family: 'Rokkitt', serif;
+}
+.event_img{
+  margin: 25px 0px 25px 25px;
+  float: left;
+}
+header{
+  background-color:rgba(0,0,0,0.9);
+  margin: 0;
+  right: 0;
+  position: fixed;
+  width: 400px;
+}
+
+.navbar_list li{
+  display: block;
+  margin-right: 0;
+  float: left;
+}
+
+#social_media_auth {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#logout{
+  padding-left: 10px;
+}
+.nav_buttons{
+  float: right;
+  line-height: 85px;
+  padding-right: 10px;
+}
+
+.nav_buttons li{
+  margin: 0 10px;
+}
+
+#signin_form{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#signup_form{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#signin_top {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+#user_profile{
+  background-color: white;
+  padding: 2px 0px 0px 2px;
+  border: 1px solid black;
+  height: 38px;
+}
+
+#profile_username{
+  color: white;
+  margin-left: 10px;
+  font-size: 25px;
+}
+#profile_image{
+  border: 10px solid rgb(11,11,11);
+}
+.comments h6{
+  color: orange;
+  float: left;
+  padding: 0 10px 0 0;
+  line-height: 1.2;
+} 
+.comments small{
+  line-height: 30px;
+  color: dark gray;
+  font-size: 15px;
+}
+.comments p{
+  color: white;
+}
+
+
+/*#profile_info{
+  list-style-type: none;
+}*/
+/*#profile_info li{
+  display:block;
+  float:left;
+  margin:0;
+}*/
+.food label{
+  background-image: url(../assets/food.png);
+  background-size: 34px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}
+.food label:hover{
+  background-color: orange;
+}
+.food{
+  text-align: center;
+}
+.sport label{
+  background-image: url(../assets/sports.png);
+  background-size: 27px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}
+.sport label:hover{
+  background-color: orange;
+}
+.sport{
+  text-align: center;
+}
+.music label{
+  background-image: url(../assets/music.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}
+.music label:hover{
+  background-color: orange;
+}
+.music{
+  text-align: center;
+}
+.nightlife label{
+  background-image: url(../assets/nightlife.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}
+.nightlife label:hover{
+  background-color: orange;
+}
+.nightlife{
+  text-align: center;
+}
+.community label{
+  background-image: url(../assets/community.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}.community label:hover{
+  background-color: orange;
+}
+.community{
+  text-align: center;
+}
+.other label{
+  background-image: url(../assets/other.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 35px;
+  height: 40px;
+}
+.other label:hover{
+  background-color: orange;
+}
+.other{
+  text-align: center;
+}
+.free label{
+  background-image: url(../assets/free.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 45px;
+  height: 45px;
+}
+.free label:hover{
+  background-color: green;
+}
+.free{
+  text-align: center;
+}
+.cheap label{
+  background-image: url(../assets/cheap.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 45px;
+  height: 45px;
+}
+.cheap label:hover{
+  background-color: green;
+}
+.cheap{
+  text-align: center;
+}
+.pricey label{
+  background-image: url(../assets/pricey.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 45px;
+  height: 45px;
+}
+.pricey label:hover{
+  background-color: green;
+}
+.pricey{
+  text-align: center;
+}
+.expensive label{
+  background-image: url(../assets/expensive.png);
+  background-size: 45px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  width: 45px;
+  height: 45px;
+}
+.expensive label:hover{
+  background-color: green;
+}
+.expensive{
+  text-align: center;
+}
+
+#new_event_type li {
+  display: block;
+  float:left;
+  padding-right: 6%;
+}
+#create_an_event{
+  text-align: center;
+  color: orange;
+  font-size: 38px;
+  font-family: 'Rokkitt', serif;
+}
+#new_event_start_time_list li {
+  display:block;
+  float:left;
+  padding-right: 2%;
+}
+#new_event_finish_time_list li {
+  display:block;
+  float:left;
+  padding-right: 2%;
+}
+
+#new_event_time {
+  width: 100%;
+}
+#new_event__am_pm {
+  width:100%;
+}
+
+#new_event_price li{
+  display: block;
+  float:left;
+  padding-right: 12%;
+}
+
+#new_event_available_spots li{
+  display:block;
+  float:left;
+  padding-right: 2%;
+}
+.show_event{
+  padding-top: 100px;
+  color: white;
+}

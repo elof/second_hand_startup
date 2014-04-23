@@ -1,0 +1,39 @@
+<div class="welcome"><a href='/'><h5 class="side-bar-title">w i g w m</h5></a></div>
+<div id="signin_top">
+  <center><h3> Come on in! </h3></center>
+  <h5>Just sign in with one your favorite social media and begin participating in event with others.</h5>
+</div>
+    <br>
+    <br>
+<div id="social_media_auth">
+  <a href="/auth/twitter"><img src="/assets/social_tw.png"></a>
+</div>
+  <br>
+<div id="social_media_auth">
+  <a href="/auth/facebook"><img src="/assets/social_fb.png"></a> 
+</div>
+<br>
+<div class="no_post"><center><font>* we will never post without your consent.</font></center></div>
+  <br>
+  <br>
+  <div class="or">-  or  -</div>
+  <br>
+  <br>
+<div id="signin_form">
+<% if current_user.nil? %>
+  <div id="signin_top"><h5> Sign-in with email.</h5></div>
+  <br>
+  <%= form_for(:session, :url => sessions_path) do |f| %>
+
+    <%= f.text_field :email, :value=>"",:placeholder => "your@email.com" %>
+
+    <%= f.password_field :password, :value=>"",:placeholder => "p@$$worD" %>
+
+    <%= f.button "Sign in" %>
+  <% end %>
+</div>
+<div class="new_user">
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+<% end %>
+</div>
+

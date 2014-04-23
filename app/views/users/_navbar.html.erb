@@ -1,0 +1,28 @@
+<header>
+ <ul class="navbar_list">
+	<li>
+		<div id="profile_image">
+        <%= image_tag (image_selector(@user))%>
+		</div>
+  </li>
+  <li>
+    <div id="profile_username"> <a href='/'><%= @user.username.capitalize %></a> </div>
+    <div id="logout">
+      <% if current_user %>
+      <%= link_to "Log out", signout_path %>
+      <% end %>
+    </div>
+  </li>
+   <div class="nav_buttons">
+  <li>
+    <a href='/events/new'><%= image_tag "/assets/plus.png", width:'30px', height:'30px' %></a>
+  </li>
+  <li>
+    <a href='#'><%= image_tag "/assets/mail.png", width:'35px', height:'37px' %></a>
+  </li>
+  <li>
+    <a href='/'><%= image_tag "/assets/calendar.png", width:'35px', height:'35px' %></a>
+  </li>
+    </div>
+ </ul>
+</header>

@@ -1,0 +1,11 @@
+<a href='/'><h5 class="side-bar-title">w i g w m</h5></a>
+<%= form_for(@user) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, :autofocus => true%>
+
+  <%= f.label :image_url %> <br />
+  <%= f.text_field :image_url %>
+
+  <%= f.submit "Update info" %>
+<% end %>
+

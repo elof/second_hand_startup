@@ -1,0 +1,59 @@
+<title><%= yield(:title) %></title>
+<% if(current_user) %>
+<%= render :partial => 'navbar' %>
+<div class="event_index">
+	<br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+<% @events.each do |event| %>
+	<ul>
+		<a href="../events/<%= event.id %>"><div id ="<%= event.id%>" class="event_list">
+			<div class="event_img">
+				<li><%= image_tag(event.event_type) %></li>
+			</div>
+			<div id="one" class="inline-list">
+				<li><%= event.name.capitalize %></li>
+				<li> @<%= event.location.capitalize %></li>
+			</div>
+			<div class="inline-list">
+				<li><%= event.rsvps.count %>/<%= event.max_attendee_number %> spots</li>
+				<li>Hosted by: <%= event.image_url %>/<%= event.user_id %></li>
+				<li>$<%= event.cost %></li>
+			</div>
+		</div></a>
+	</ul><hr>
+<% end %>
+</div>
+
+<% else %>
+
+<div class='splash'>
+		<a href='/'><h5 class="side-bar-title">w i g w m</h5></a>
+		<div class="intro_1">
+			<h5>A community for individuals to come together and participate in common interestes</h5>
+		</div>		
+	
+		<div class="what_to_do">
+			<h3> Let's get started:</h3>
+		</div>
+		<div class="to_do_list">
+			<div class="to_do_list_num">1.</div><br>
+			<div class="things_to_do">Find an event that interests you.</div><br><br><br><br>
+			<div class="to_do_list_num">2.</div><br>
+			<div class="things_to_do">RSVP for that event.</div><br><br><br><br>
+			<div class="to_do_list_num">3.</div><br>
+			<div class="things_to_do">Meet new people.</div>
+		</div>
+		
+		<br>
+		<div class="button large secondary">
+		<%= link_to 'Sign In', signin_path %>
+		</div>
+	</div>
+	<% end %>
+</div>
